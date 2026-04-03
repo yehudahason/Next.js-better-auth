@@ -26,7 +26,7 @@ export default function AuthPage() {
   // 🚫 Prevent hydration mismatch
   if (!mounted) return null;
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);

@@ -19,10 +19,17 @@ export const auth = betterAuth({
   database: prismaAdapter(prisma, {
     provider: "postgresql",
   }),
+  map: {
+    user: "users",
+    session: "sessions",
+    account: "accounts",
+    verification: "verifications",
+  },
   emailAndPassword: {
     enabled: true,
     requireEmailVerification: true,
   },
+  baseURL: process.env.BETTER_AUTH_URL,
 
   emailVerification: {
     autoSignInAfterVerification: true,
