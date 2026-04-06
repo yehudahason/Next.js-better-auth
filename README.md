@@ -1,1 +1,1 @@
-# Next.js Better-auth starter
+## Next.js with Better-auth starter
